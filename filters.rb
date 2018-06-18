@@ -15,17 +15,17 @@ def experienced?(candidate)
 end
 
 def qualified_candidates(candidates)
-  candidate.select do |candidate|
+  candidates.select do |candidate|
     experienced?(candidate) && github(candidate) && language(candidate) && day(candidate) && age(candidate)
   end
 end
 
-def github(candidates)
+def github(candidate)
   candidate[:github_points] >= 100
 end
 
 def language(candidate)
-  candidate[:language].include?("Ruby") || candidate[:language].include?("Python")
+  (candidate[:languages].include?("Ruby") || candidate[:languages].include?("Python"))
 end
 
 def day(candidate)
