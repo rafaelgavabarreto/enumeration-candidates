@@ -25,7 +25,7 @@ def github(candidates)
 end
 
 def language(candidate)
-  candidate[:language].include?("Ruby") || candidate[:language].include?(Python)
+  candidate[:language].include?("Ruby") || candidate[:language].include?("Python")
 end
 
 def day(candidate)
